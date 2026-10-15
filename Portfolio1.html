@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshit Singh - Student Portfolio</title>
+    <style>
+        * { box-sizing: border-box; }                         
+        body {                                                
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #202638;                                  
+            background-color: #f3f6fb;                       
+            background-image: linear-gradient(135deg, #eef2ff, #f8fafc);
+            font-size: 12pt;                                 
+        }
+        header, main, footer {                                
+            width: 90%;
+            max-width: 1100px;
+            margin: 18px auto;
+        }
+        header { text-align: center; }
+        header img {
+            width: 150px;                                    
+            height: 150px;                                   
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #5267d8;
+        }
+        h1, h2 { color: rgb(55, 70, 160); }                   
+        h2 {
+            padding: 8px 12px;
+            background-color: rgba(82, 103, 216, 0.12);      
+            border-left: 4px solid #5267d8;
+            border-radius: 5px;
+        }
+        section {
+            margin: 22px 0;
+            padding: 18px;
+            background-color: rgba(255, 255, 255, 0.92);
+            border: 1px solid #dce3f0;
+            border-radius: 12px;
+        }
+        .intro { color: #34456e; }                           
+        .skill-list { line-height: 1.8; }
+        #project-summary {                                    
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        #project-summary th, #project-summary td {
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            text-align: left;
+        }
+        #project-summary th { background-color: #5267d8; color: #ffffff; }
+        section p { line-height: 1.65; }                     
+        a { color: #354cc4; }
+        a:hover { color: #c2410c; }
+        .learning-focus { visibility: visible; }              
+        .day6-note {
+            padding: 12px;
+            background-color: rgba(14, 165, 233, 0.10);
+            border: 1px solid rgba(14, 165, 233, 0.35);
+            border-radius: 8px;
+        }
+        footer { text-align: center; color: #64748b; }
+        @media (max-width: 600px) {
+            header, main, footer { width: 94%; }
+            section { padding: 12px; }
+        }
+    </style>
+</head>
+<body id="portfolio-page">
+
+<header>
+    <center>
+    <big><b>Harshit Singh</b></big><br>
+    <img src="photo.jpeg"
+         alt="Harshit Singh" width="150" height="150">
+    <p class="intro">B.Tech Computer Science Student</p>
+    <p class="intro">Cybersecurity | Artificial Intelligence | Web Development</p>
+    <hr color="blue" size="5">
+    </center>
+</header>
+
+<main>
+
+    <section>
+        <h2>About Me</h2>
+        <article>
+            <p>
+                Hi, I'm Harshit, a B.Tech student with a strong interest in
+                Cybersecurity and Ethical Hacking.
+            </p>
+            <p>
+                I am currently building my technical foundation by learning
+                C, Python, HTML, CSS, Linux, and Nmap. I enjoy exploring how
+                computer systems and networks work and learning how they can
+                be secured against security threats.
+            </p>
+            <p>
+                I believe in learning by doing, so I focus on practicing
+                concepts, exploring cybersecurity tools, and building practical
+                projects to improve my skills.
+            </p>
+            <p>
+                My goal is to continuously develop my knowledge in
+                Network Security, Ethical Hacking, Cybersecurity, and AI
+                and use these skills to solve real-world security problems.
+            </p>
+        </article>
+
+        <aside>
+            <small class="learning-focus">Learning Focus: Cybersecurity + AI + Networking</small>
+        </aside>
+    </section>
+
+    <hr color="green" size="5">
+
+    <section>
+        <h2>Skills</h2>
+        <p>My current technical skills are divided into the following groups:</p>
+
+        <ul class="skill-list">
+            <li>💻Programming
+                <ul>
+                    <li>C</li>
+                    <li>Python</li>
+                </ul>
+            </li>
+            <li>🌐Web Development
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Angular JavaScript</li>
+                </ul>
+            </li>
+            <li>🐧Operating Systems
+                <ul>
+                    <li>Linux</li>
+                    <li>Parrot OS</li>
+                    <li>Ubuntu</li>
+                </ul>
+            </li>
+            <li>🔐Cybersecurity Tools
+                <ul>
+                    <li>Nmap</li>
+                    <li>Basic Aircrack</li>
+                    <li>Basic Wireshark</li>
+                </ul>
+            </li>
+            <li>🛡️Cybersecurity
+                <ul>
+                    <li>Cybersecurity Fundamentals</li>
+                    <li>Network Security Fundamentals</li>
+                    <li>Basic Ethical Hacking</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <hr color="yellow" size="5">
+
+    <section>
+        <h2>My Projects</h2>
+        <p>Some projects I am working on are listed below:</p>
+
+        <ol>
+            <li>🔐CTF Platform - Cybersecurity and Web
+                <p><a href="Project.html">View Project</a></p>
+            </li>
+            <li>🤖AI Code Analyzer - AI and Python
+                <p><a href="Project.html">View Project</a></p>
+            </li>
+            <li>🔎Port Scanner - Python and Networking
+                <p><a href="Project.html">View Project</a></p>
+            </li>
+            <li>🎭Deepfake Detect - AI and Computer Vision
+                <p><a href="Project.html">View Project</a></p>
+            </li>
+            <li>🛡️Network Incident Story Generator - AI and Cybersecurity
+                <p><small>🚧In Development</small></p>
+                <a href="Project.html">View Project</a>
+            </li>
+            <li>🤖Scheme AI - AI
+                <p><small>🚧In Development</small></p>
+                <a href="schemeai_v3_connected.html">View Project</a>
+            </li>
+            <li>🤖TransformX AI - AI
+                <p><small>🚧In Development</small></p>
+                <a href="https://github.com/Harshitsingh666/TransformX-AI">View Project</a>
+            </li>
+        </ol>
+    </section>
+
+    <hr color="red" size="5">
+
+    <section>
+        <h2>Project Information Table</h2>
+        <table id="project-summary" border="1">
+            <caption>My Project Summary</caption>
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Area</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CTF Platform</td>
+                    <td>Cybersecurity / Web</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>AI Code Analyzer</td>
+                    <td>AI / Python</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>Port Scanner</td>
+                    <td>Python / Networking</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>Deepfake Detect</td>
+                    <td>AI / Computer Vision</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>Network Incident Story Generator</td>
+                    <td>AI / Cybersecurity</td>
+                    <td>In Development</td>
+                </tr>
+                <tr>
+                    <td>Scheme AI</td>
+                    <td>AI</td>
+                    <td>In Development</td>
+                </tr>
+                <tr>
+                    <td>TransformX AI</td>
+                    <td>AI</td>
+                    <td>In Development</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr color="orange" size="5">
+
+    <section>
+        <h2>Education</h2>
+        <p><big>B.Tech</big> - Computer Science / Cybersecurity</p>
+        <p>10<sup>th</sup> Marksheet:
+            <a href="WhatsApp Image 2025-07-21 at 11.45.42_09f3cd73.JPG">View Marksheet</a>
+        </p>
+        <p>12<sup>th</sup> Marksheet:
+            <a href="WhatsApp Image 2025-07-21 at 11.45.42_e15888c6.JPG">View Marksheet</a>
+        </p>
+        <p>Certificate:
+            <a href="CTF.JPEG">Show Certificate</a>
+        </p>
+        <p>My learning goal is to improve my cybersecurity knowledge from basic<sub>1</sub> to advanced<sub>2</sub> levels.</p>
+    </section>
+
+    <hr color="purple" size="5">
+
+    <section>
+        <h2>Learning Order</h2>
+        <p>I follow a simple step-by-step approach:</p>
+        <ol>
+            <li>Learn the concept</li>
+            <li>Practice the concept</li>
+            <li>Build a project</li>
+            <li>Improve the project</li>
+        </ol>
+    </section>
+
+    <hr color="purple" size="5">
+
+    <section>
+        <h2>Contact</h2>
+        <p>Email: <span>hharshitsingh66@gmail.com</span></p>
+        <p>Interested in collaboration, learning, and technology projects.</p>
+    </section>
+
+</main>
+
+</body>
+</html>
