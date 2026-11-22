@@ -1,292 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshit Singh - Student Portfolio</title>
-    <style>
-        * { box-sizing: border-box; }                         
-        body {                                                
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #202638;                                  
-            background-color: #f3f6fb;                       
-            background-image: linear-gradient(135deg, #eef2ff, #f8fafc);
-            font-size: 12pt;                                 
-        }
-        header, main, footer {                                
-            width: 90%;
-            max-width: 1100px;
-            margin: 18px auto;
-        }
-        header { text-align: center; }
-        header img {
-            width: 150px;                                    
-            height: 150px;                                   
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #5267d8;
-        }
-        h1, h2 { color: rgb(55, 70, 160); }                   
-        h2 {
-            padding: 8px 12px;
-            background-color: rgba(82, 103, 216, 0.12);      
-            border-left: 4px solid #5267d8;
-            border-radius: 5px;
-        }
-        section {
-            margin: 22px 0;
-            padding: 18px;
-            background-color: rgba(255, 255, 255, 0.92);
-            border: 1px solid #dce3f0;
-            border-radius: 12px;
-        }
-        .intro { color: #34456e; }                           
-        .skill-list { line-height: 1.8; }
-        #project-summary {                                    
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #ffffff;
-        }
-        #project-summary th, #project-summary td {
-            border: 1px solid #cbd5e1;
-            padding: 10px;
-            text-align: left;
-        }
-        #project-summary th { background-color: #5267d8; color: #ffffff; }
-        section p { line-height: 1.65; }                     
-        a { color: #354cc4; }
-        a:hover { color: #c2410c; }
-        .learning-focus { visibility: visible; }              
-        .day6-note {
-            padding: 12px;
-            background-color: rgba(14, 165, 233, 0.10);
-            border: 1px solid rgba(14, 165, 233, 0.35);
-            border-radius: 8px;
-        }
-        footer { text-align: center; color: #64748b; }
-        @media (max-width: 600px) {
-            header, main, footer { width: 94%; }
-            section { padding: 12px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Harshit Singh — computer science student exploring cybersecurity, AI, networking, and web development.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Harshit Singh — Student Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+  <style>
+    :root{--ink:#edf2ff;--muted:#a6b1ca;--bg:#0b1020;--panel:#111a2e;--line:#26334d;--cyan:#69e3d1;--violet:#a795ff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:5rem}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;background-image:radial-gradient(ellipse at 82% 4%,rgba(107,90,205,.17),transparent 36%),radial-gradient(ellipse at 8% 38%,rgba(37,180,165,.08),transparent 32%)}
+    a{color:var(--cyan);text-decoration:none}a:hover{color:#b8fff3;text-decoration:underline}
+    .navbar{background:rgba(11,16,32,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(166,177,202,.12)}
+    .navbar-brand{color:var(--ink);font-weight:750;letter-spacing:-.04em}.navbar-brand span{color:var(--cyan)}
+    .navbar .nav-link{color:var(--muted)}.navbar .nav-link:hover,.navbar .nav-link:focus{color:var(--cyan)}
+    .navbar-toggler{border-color:var(--line)}.navbar-toggler-icon{filter:invert(1)}
+    .hero{min-height:88vh;display:flex;align-items:center;padding:8rem 0 5rem;position:relative;overflow:hidden}
+    .hero::after{content:"";position:absolute;width:30rem;height:30rem;border:1px solid rgba(105,227,209,.12);border-radius:50%;right:-12rem;top:18%;box-shadow:0 0 0 3rem rgba(105,227,209,.025),0 0 0 6rem rgba(167,149,255,.025);pointer-events:none}
+    .eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:750}
+    h1{font-size:clamp(3.25rem,8vw,6.8rem);font-weight:800;letter-spacing:-.075em;line-height:.98;margin:1rem 0 1.4rem}h1 .accent{color:var(--cyan)}
+    .hero-copy{color:var(--muted);font-size:clamp(1.05rem,2vw,1.23rem);max-width:39rem}
+    .hero-stamp{width:min(100%,23rem);aspect-ratio:1;border:1px solid rgba(105,227,209,.28);border-radius:50%;display:grid;place-items:center;margin:auto;position:relative;background:radial-gradient(circle,rgba(105,227,209,.13),rgba(17,26,46,.18) 64%,transparent 65%);animation:float 6s ease-in-out infinite}
+    .hero-stamp::before,.hero-stamp::after{content:"";position:absolute;inset:12%;border:1px dashed rgba(167,149,255,.35);border-radius:50%;animation:spin 38s linear infinite}.hero-stamp::after{inset:24%;border-style:solid;opacity:.45;animation-direction:reverse}
+    .stamp-core{font-size:clamp(4.5rem,10vw,7rem);font-weight:850;letter-spacing:-.1em;color:var(--ink)}.stamp-core span{color:var(--cyan)}
+    .section{padding:5.5rem 0}.section-heading{font-weight:780;letter-spacing:-.055em;font-size:clamp(2rem,4vw,3.25rem)}.section-intro{color:var(--muted);max-width:44rem}
+    .panel,.project-card,.skill-card,.record-card,.timeline-card{height:100%;background:linear-gradient(145deg,rgba(20,31,53,.92),rgba(14,22,39,.88));border:1px solid var(--line);border-radius:1.2rem}
+    .panel{padding:clamp(1.4rem,4vw,2.4rem)}.project-card,.skill-card,.record-card,.timeline-card{padding:1.5rem;transition:transform .25s,border-color .25s,background .25s}.project-card:hover,.skill-card:hover,.record-card:hover,.timeline-card:hover{transform:translateY(-5px);border-color:rgba(105,227,209,.55)}
+    .section-label{color:var(--cyan);font-size:.77rem;text-transform:uppercase;letter-spacing:.15em;font-weight:750}.muted{color:var(--muted)}
+    .pill{display:inline-flex;padding:.3rem .7rem;border:1px solid var(--line);border-radius:50rem;color:#c8d4ea;font-size:.78rem;margin:.2rem .2rem .1rem 0}
+    .metric{font-weight:800;font-size:2.25rem;line-height:1;color:var(--cyan);letter-spacing:-.06em}.metric-label{color:var(--muted);font-size:.85rem}
+    .project-number{font-size:.8rem;color:var(--violet);letter-spacing:.12em}.project-card h3,.skill-card h3,.record-card h3{font-size:1.16rem;font-weight:730;letter-spacing:-.025em}
+    .status{font-size:.72rem;border:1px solid rgba(105,227,209,.32);border-radius:50rem;padding:.2rem .6rem;color:var(--cyan)}.status.building{color:#f6ce82;border-color:rgba(246,206,130,.32)}
+    .table{--bs-table-bg:transparent;--bs-table-color:var(--ink);--bs-table-border-color:var(--line);margin-bottom:0}.table thead th{color:var(--cyan);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}.table td,.table th{padding:1rem .85rem;vertical-align:middle}.table caption{color:var(--muted)}
+    .timeline-line{border-left:1px solid var(--line);margin-left:.4rem;padding-left:1.35rem}.timeline-item{position:relative;padding:0 0 1.4rem}.timeline-item::before{content:"";position:absolute;left:-1.72rem;top:.5rem;width:.65rem;height:.65rem;background:var(--cyan);border-radius:50%;box-shadow:0 0 0 5px rgba(105,227,209,.1)}
+    .contact-box{background:linear-gradient(120deg,rgba(105,227,209,.1),rgba(167,149,255,.1));border:1px solid rgba(105,227,209,.25);border-radius:1.4rem;padding:clamp(1.6rem,5vw,3.4rem)}
+    footer{border-top:1px solid rgba(166,177,202,.12);color:var(--muted);padding:1.5rem 0;font-size:.9rem}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @keyframes float{50%{transform:translateY(-12px)}}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:767.98px){.hero{min-height:auto;padding-top:8rem}.hero-stamp{width:min(68vw,18rem);margin-top:3rem}.section{padding:4.25rem 0}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
-<body id="portfolio-page">
-
-<header>
-    <center>
-    <big><b>Harshit Singh</b></big><br>
-    <img src="photo.jpeg"
-         alt="Harshit Singh" width="150" height="150">
-    <p class="intro">B.Tech Computer Science Student</p>
-    <p class="intro">Cybersecurity | Artificial Intelligence | Web Development</p>
-    <hr color="blue" size="5">
-    </center>
-</header>
-
-<main>
-
-    <section>
-        <h2>About Me</h2>
-        <article>
-            <p>
-                Hi, I'm Harshit, a B.Tech student with a strong interest in
-                Cybersecurity and Ethical Hacking.
-            </p>
-            <p>
-                I am currently building my technical foundation by learning
-                C, Python, HTML, CSS, Linux, and Nmap. I enjoy exploring how
-                computer systems and networks work and learning how they can
-                be secured against security threats.
-            </p>
-            <p>
-                I believe in learning by doing, so I focus on practicing
-                concepts, exploring cybersecurity tools, and building practical
-                projects to improve my skills.
-            </p>
-            <p>
-                My goal is to continuously develop my knowledge in
-                Network Security, Ethical Hacking, Cybersecurity, and AI
-                and use these skills to solve real-world security problems.
-            </p>
-        </article>
-
-        <aside>
-            <small class="learning-focus">Learning Focus: Cybersecurity + AI + Networking</small>
-        </aside>
+<body id="top">
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="#top">HS<span>.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li><li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li><li class="nav-item"><a class="nav-link" href="#learning">Learning</a></li><li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container position-relative" style="z-index:1"><div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="eyebrow mb-3">Computer science student · curious by nature</p>
+          <h1 id="hero-title">Harshit<br><span class="accent">Singh.</span></h1>
+          <p class="hero-copy">I’m building my foundation in cybersecurity, AI, networking, and web development—one experiment and one project at a time.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4"><a class="btn btn-info rounded-pill px-4 py-2 fw-semibold" href="#projects">Explore my work <span aria-hidden="true">↘</span></a><a class="btn btn-outline-light rounded-pill px-4 py-2" href="#about">A little about me</a></div>
+          <p class="muted mt-4 mb-0"><span class="text-info">●</span> Learning in public · B.Tech Computer Science</p>
+        </div>
+        <div class="col-lg-5"><div class="hero-stamp" role="img" aria-label="Animated initials H S"><div class="stamp-core">H<span>.</span>S</div></div></div>
+      </div></div>
     </section>
 
-    <hr color="green" size="5">
+    <section class="section pt-0" id="about" aria-labelledby="about-title"><div class="container"><div class="row g-4 align-items-stretch">
+      <div class="col-lg-8 reveal"><article class="panel"><p class="section-label">01 / About</p><h2 class="section-heading" id="about-title">Learning by building.</h2><p class="muted mb-3">Hi, I’m Harshit, a B.Tech Computer Science student interested in how systems work—and how to make them safer.</p><p class="muted mb-0">I’m growing my skills in C, Python, HTML, CSS, JavaScript, and Linux. I enjoy hands-on practice with networking and security tools, and I’m exploring where artificial intelligence can help solve practical problems.</p><aside class="mt-4"><span class="pill">Current focus</span><span class="pill">Cybersecurity</span><span class="pill">AI</span><span class="pill">Networking</span></aside></article></div>
+      <div class="col-lg-4 reveal"><div class="panel d-flex flex-column justify-content-between"><p class="section-label">The approach</p><ol class="list-unstyled mb-0"><li class="d-flex gap-3 mb-3"><span class="text-info fw-bold">01</span><span>Learn the concept</span></li><li class="d-flex gap-3 mb-3"><span class="text-info fw-bold">02</span><span>Practice with care</span></li><li class="d-flex gap-3 mb-3"><span class="text-info fw-bold">03</span><span>Build something useful</span></li><li class="d-flex gap-3"><span class="text-info fw-bold">04</span><span>Improve and share</span></li></ol></div></div>
+    </div></div></section>
 
-    <section>
-        <h2>Skills</h2>
-        <p>My current technical skills are divided into the following groups:</p>
+    <section class="section" id="skills" aria-labelledby="skills-title"><div class="container"><p class="section-label">02 / Toolkit</p><h2 class="section-heading" id="skills-title">Things I’m learning.</h2><p class="section-intro mb-4">A growing toolkit, grouped by the areas I’m exploring today.</p><div class="row g-3">
+      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><p class="project-number">01 — PROGRAMMING</p><h3>Code & logic</h3><p class="muted">Learning to think in steps and turn ideas into working programs.</p><span class="pill">C</span><span class="pill">Python</span></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><p class="project-number">02 — WEB</p><h3>Building for the browser</h3><p class="muted">Practicing structure, styling, responsive layouts, and interaction.</p><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">Bootstrap</span></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><p class="project-number">03 — SYSTEMS</p><h3>Linux & operating systems</h3><p class="muted">Getting comfortable with command-line tools and different environments.</p><span class="pill">Linux</span><span class="pill">Parrot OS</span><span class="pill">Ubuntu</span></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><p class="project-number">04 — NETWORKS</p><h3>Exploring networks</h3><p class="muted">Learning how devices communicate and how to inspect network activity.</p><span class="pill">Networking basics</span><span class="pill">Nmap</span><span class="pill">Wireshark basics</span></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card"><p class="project-number">05 — SECURITY</p><h3>Security foundations</h3><p class="muted">Building responsible, practical knowledge of security fundamentals.</p><span class="pill">Network security</span><span class="pill">CTF practice</span><span class="pill">Aircrack basics</span></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="skill-card d-flex flex-column justify-content-center"><p class="section-label">Always learning</p><p class="mb-0">Curiosity is part of the toolkit. These skills are in progress, and this page will grow with them.</p></article></div>
+    </div></div></section>
 
-        <ul class="skill-list">
-            <li>💻Programming
-                <ul>
-                    <li>C</li>
-                    <li>Python</li>
-                </ul>
-            </li>
-            <li>🌐Web Development
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Angular JavaScript</li>
-                </ul>
-            </li>
-            <li>🐧Operating Systems
-                <ul>
-                    <li>Linux</li>
-                    <li>Parrot OS</li>
-                    <li>Ubuntu</li>
-                </ul>
-            </li>
-            <li>🔐Cybersecurity Tools
-                <ul>
-                    <li>Nmap</li>
-                    <li>Basic Aircrack</li>
-                    <li>Basic Wireshark</li>
-                </ul>
-            </li>
-            <li>🛡️Cybersecurity
-                <ul>
-                    <li>Cybersecurity Fundamentals</li>
-                    <li>Network Security Fundamentals</li>
-                    <li>Basic Ethical Hacking</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+    <section class="section" id="projects" aria-labelledby="projects-title"><div class="container"><p class="section-label">03 / Selected work</p><h2 class="section-heading" id="projects-title">Ideas in progress.</h2><p class="section-intro mb-4">A mix of project concepts and ongoing builds across security, AI, and the web.</p><div class="row g-3">
+      <div class="col-md-6 col-lg-4 reveal"><article class="project-card"><div class="d-flex justify-content-between mb-3"><span class="project-number">01 / SECURITY + WEB</span><span class="status building">Exploring</span></div><h3>CTF Platform</h3><p class="muted mb-0">A web-based place to learn through cybersecurity challenges.</p></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="project-card"><div class="d-flex justify-content-between mb-3"><span class="project-number">02 / AI + PYTHON</span><span class="status building">Exploring</span></div><h3>AI Code Analyzer</h3><p class="muted mb-0">An idea for helping developers understand and review code.</p></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="project-card"><div class="d-flex justify-content-between mb-3"><span class="project-number">03 / NETWORKING</span><span class="status building">Exploring</span></div><h3>Port Scanner</h3><p class="muted mb-0">A Python learning project for understanding network services.</p></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="project-card"><div class="d-flex justify-content-between mb-3"><span class="project-number">04 / AI + VISION</span><span class="status building">Exploring</span></div><h3>Deepfake Detect</h3><p class="muted mb-0">Exploring computer vision approaches to synthetic-media detection.</p></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="project-card"><div class="d-flex justify-content-between mb-3"><span class="project-number">05 / AI + SECURITY</span><span class="status building">In development</span></div><h3>Network Incident Story Generator</h3><p class="muted mb-0">An AI concept for turning security events into understandable narratives.</p></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="project-card"><div class="d-flex justify-content-between mb-3"><span class="project-number">06 / AI</span><span class="status building">In development</span></div><h3>Scheme AI</h3><p class="muted mb-0">An AI project currently being developed.</p></article></div>
+      <div class="col-md-6 col-lg-4 reveal"><article class="project-card"><div class="d-flex justify-content-between mb-3"><span class="project-number">07 / AI</span><span class="status building">In development</span></div><h3>TransformX AI</h3><p class="muted mb-3">An AI project currently being developed.</p><a href="https://github.com/Harshitsingh666/TransformX-AI" target="_blank" rel="noreferrer">Project repository <span aria-hidden="true">↗</span></a></article></div>
+    </div></div></section>
 
-    <hr color="yellow" size="5">
+    <section class="section pt-0" aria-labelledby="summary-title"><div class="container"><div class="panel reveal"><div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3"><div><p class="section-label">At a glance</p><h2 class="h3 mb-0" id="summary-title">Project summary</h2></div><span class="muted small">A snapshot of my current portfolio</span></div><div class="table-responsive"><table class="table"><caption class="caption-top">Project ideas and current status</caption><thead><tr><th scope="col">Project</th><th scope="col">Area</th><th scope="col">Status</th></tr></thead><tbody>
+      <tr><th scope="row">CTF Platform</th><td>Cybersecurity · Web</td><td>Exploring</td></tr><tr><th scope="row">AI Code Analyzer</th><td>AI · Python</td><td>Exploring</td></tr><tr><th scope="row">Port Scanner</th><td>Python · Networking</td><td>Exploring</td></tr><tr><th scope="row">Deepfake Detect</th><td>AI · Computer Vision</td><td>Exploring</td></tr><tr><th scope="row">Network Incident Story Generator</th><td>AI · Cybersecurity</td><td>In development</td></tr><tr><th scope="row">Scheme AI</th><td>AI</td><td>In development</td></tr><tr><th scope="row">TransformX AI</th><td>AI</td><td>In development</td></tr>
+      </tbody></table></div></div></div></section>
 
-    <section>
-        <h2>My Projects</h2>
-        <p>Some projects I am working on are listed below:</p>
+    <section class="section" id="learning" aria-labelledby="learning-title"><div class="container"><div class="row g-5"><div class="col-lg-5 reveal"><p class="section-label">04 / The journey</p><h2 class="section-heading" id="learning-title">Learning, step by step.</h2><p class="section-intro">My class notes trace a path from web foundations to programming, layout, and Git.</p><div class="row g-3 mt-2"><div class="col-6"><div class="timeline-card"><div class="metric">01–04</div><div class="metric-label mt-2">HTML foundations</div></div></div><div class="col-6"><div class="timeline-card"><div class="metric">05–07</div><div class="metric-label mt-2">CSS & visual design</div></div></div><div class="col-6"><div class="timeline-card"><div class="metric">08</div><div class="metric-label mt-2">JavaScript basics</div></div></div><div class="col-6"><div class="timeline-card"><div class="metric">09</div><div class="metric-label mt-2">Flex, grid & Bootstrap</div></div></div></div></div>
+      <div class="col-lg-7 reveal"><div class="panel"><p class="section-label">Classroom notes</p><ol class="timeline-line list-unstyled mb-0"><li class="timeline-item"><strong>HTML & the web</strong><div class="muted">Page structure, headings, images, links, semantic sections, lists, and tables.</div></li><li class="timeline-item"><strong>CSS & visual design</strong><div class="muted">Selectors, color, backgrounds, dimensions, typography, and text styling.</div></li><li class="timeline-item"><strong>JavaScript</strong><div class="muted">Variables, data types, conditions, loops, arrays, objects, and functions.</div></li><li class="timeline-item"><strong>Layouts & tools</strong><div class="muted">Flexbox, grid, responsive layouts, Bootstrap, and Git/GitHub.</div></li></ol></div></div>
+    </div></div></section>
 
-        <ol>
-            <li>🔐CTF Platform - Cybersecurity and Web
-                <p><a href="Project.html">View Project</a></p>
-            </li>
-            <li>🤖AI Code Analyzer - AI and Python
-                <p><a href="Project.html">View Project</a></p>
-            </li>
-            <li>🔎Port Scanner - Python and Networking
-                <p><a href="Project.html">View Project</a></p>
-            </li>
-            <li>🎭Deepfake Detect - AI and Computer Vision
-                <p><a href="Project.html">View Project</a></p>
-            </li>
-            <li>🛡️Network Incident Story Generator - AI and Cybersecurity
-                <p><small>🚧In Development</small></p>
-                <a href="Project.html">View Project</a>
-            </li>
-            <li>🤖Scheme AI - AI
-                <p><small>🚧In Development</small></p>
-                <a href="schemeai_v3_connected.html">View Project</a>
-            </li>
-            <li>🤖TransformX AI - AI
-                <p><small>🚧In Development</small></p>
-                <a href="https://github.com/Harshitsingh666/TransformX-AI">View Project</a>
-            </li>
-        </ol>
-    </section>
+    <section class="section pt-0" id="education" aria-labelledby="education-title"><div class="container"><p class="section-label">05 / Education</p><h2 class="section-heading" id="education-title">Academic journey.</h2><div class="row g-3 mt-1"><div class="col-md-6 reveal"><article class="record-card"><p class="project-number">CURRENT STUDY</p><h3>B.Tech · Computer Science</h3><p class="muted mb-0">Building a foundation for a future in technology, with a focus on cybersecurity and AI.</p></article></div><div class="col-md-6 reveal"><article class="record-card"><p class="project-number">MARKSHEETS & CERTIFICATES</p><h3>Academic records</h3><p class="muted mb-0">I’ll add links to my 10th and 12th marksheets and certificates once the files are ready to share.</p></article></div></div></div></section>
 
-    <hr color="red" size="5">
-
-    <section>
-        <h2>Project Information Table</h2>
-        <table id="project-summary" border="1">
-            <caption>My Project Summary</caption>
-            <thead>
-                <tr>
-                    <th>Project</th>
-                    <th>Area</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>CTF Platform</td>
-                    <td>Cybersecurity / Web</td>
-                    <td>Available</td>
-                </tr>
-                <tr>
-                    <td>AI Code Analyzer</td>
-                    <td>AI / Python</td>
-                    <td>Available</td>
-                </tr>
-                <tr>
-                    <td>Port Scanner</td>
-                    <td>Python / Networking</td>
-                    <td>Available</td>
-                </tr>
-                <tr>
-                    <td>Deepfake Detect</td>
-                    <td>AI / Computer Vision</td>
-                    <td>Available</td>
-                </tr>
-                <tr>
-                    <td>Network Incident Story Generator</td>
-                    <td>AI / Cybersecurity</td>
-                    <td>In Development</td>
-                </tr>
-                <tr>
-                    <td>Scheme AI</td>
-                    <td>AI</td>
-                    <td>In Development</td>
-                </tr>
-                <tr>
-                    <td>TransformX AI</td>
-                    <td>AI</td>
-                    <td>In Development</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <hr color="orange" size="5">
-
-    <section>
-        <h2>Education</h2>
-        <p><big>B.Tech</big> - Computer Science / Cybersecurity</p>
-        <p>10<sup>th</sup> Marksheet:
-            <a href="WhatsApp Image 2025-07-21 at 11.45.42_09f3cd73.JPG">View Marksheet</a>
-        </p>
-        <p>12<sup>th</sup> Marksheet:
-            <a href="WhatsApp Image 2025-07-21 at 11.45.42_e15888c6.JPG">View Marksheet</a>
-        </p>
-        <p>Certificate:
-            <a href="CTF.JPEG">Show Certificate</a>
-        </p>
-        <p>My learning goal is to improve my cybersecurity knowledge from basic<sub>1</sub> to advanced<sub>2</sub> levels.</p>
-    </section>
-
-    <hr color="purple" size="5">
-
-    <section>
-        <h2>Learning Order</h2>
-        <p>I follow a simple step-by-step approach:</p>
-        <ol>
-            <li>Learn the concept</li>
-            <li>Practice the concept</li>
-            <li>Build a project</li>
-            <li>Improve the project</li>
-        </ol>
-    </section>
-
-    <hr color="purple" size="5">
-
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <span>hharshitsingh66@gmail.com</span></p>
-        <p>Interested in collaboration, learning, and technology projects.</p>
-    </section>
-
-</main>
-
+    <section class="section pt-0" id="contact" aria-labelledby="contact-title"><div class="container reveal"><div class="contact-box"><div class="row align-items-center g-4"><div class="col-lg-8"><p class="section-label">06 / Get in touch</p><h2 class="section-heading" id="contact-title">Let’s learn and build.</h2><p class="muted mb-0">Open to conversations about technology, learning, and student projects.</p></div><div class="col-lg-4 text-lg-end"><a class="btn btn-info rounded-pill px-4 py-2 fw-semibold" href="mailto:hharshitsingh66@gmail.com">hharshitsingh66@gmail.com <span aria-hidden="true">↗</span></a></div></div></div></div></section>
+  </main>
+  <footer><div class="container d-flex flex-wrap justify-content-between gap-2"><span>© <span id="year">2026</span> Harshit Singh</span><a href="#top">Back to top ↑</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+  </script>
 </body>
 </html>
+

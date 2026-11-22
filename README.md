@@ -1,26 +1,18 @@
-# Student Portfolio
+# Harshit Singh — Student Portfolio
 
-A responsive, single-file HTML portfolio introducing Harshit Singh's studies, skills, and project interests.
+A responsive, single-page portfolio built with semantic HTML, custom CSS, vanilla JavaScript, and Bootstrap 5.3.9.
 
-## Preview locally
+## Preview
 
-Clone the repository and open `Portfolio1.html` in a modern browser. No build step or dependencies are required.
+Open `index.html` in a browser. It forwards to `Portfolio1.html`, the full portfolio page. Bootstrap is loaded from the official jsDelivr CDN, so an internet connection is needed for the layout framework and mobile navigation.
 
 ## Page sections
 
-- About and current learning focus
-- Technical skills
-- Project list
-- Education and learning plan
-- Contact information
+- About and learning approach
+- Skills grouped by topic
+- Project cards and project summary table
+- Classroom learning timeline
+- Education and contact
 
-## Files
+The class-note images supplied with the update informed the learning timeline and the HTML, CSS, JavaScript, Flexbox, Grid, Git, and Bootstrap topics. Academic document links and a profile photo can be added once the shareable files are supplied.
 
-```text
-.
-├── Portfolio1.html  # Page markup and inline styles
-├── photo.jpeg       # Profile image referenced by the page
-└── README.md
-```
-
-The project links are portfolio placeholders; confirm their targets exist before sharing a published version.
